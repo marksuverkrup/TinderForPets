@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinderForPets.WebMVC", "TinderForPets.WebMVC\TinderForPets.WebMVC.csproj", "{2418DE8E-D995-4B6C-9D2E-0A1CC724B34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinderForPets.Data", "TinderForPets.Data\TinderForPets.Data.csproj", "{2C074AB5-B064-4300-B1DB-D125476A88E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinderForPets.Models", "TinderForPets.Models\TinderForPets.Models.csproj", "{873D79F9-3229-415E-925A-E36A146E2432}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinderForPets.Services", "TinderForPets.Services\TinderForPets.Services.csproj", "{8B49836C-4626-4673-824C-9A1CBF3FCE97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2418DE8E-D995-4B6C-9D2E-0A1CC724B34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2418DE8E-D995-4B6C-9D2E-0A1CC724B34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2418DE8E-D995-4B6C-9D2E-0A1CC724B34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2418DE8E-D995-4B6C-9D2E-0A1CC724B34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C074AB5-B064-4300-B1DB-D125476A88E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C074AB5-B064-4300-B1DB-D125476A88E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C074AB5-B064-4300-B1DB-D125476A88E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C074AB5-B064-4300-B1DB-D125476A88E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{873D79F9-3229-415E-925A-E36A146E2432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873D79F9-3229-415E-925A-E36A146E2432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873D79F9-3229-415E-925A-E36A146E2432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873D79F9-3229-415E-925A-E36A146E2432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B49836C-4626-4673-824C-9A1CBF3FCE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B49836C-4626-4673-824C-9A1CBF3FCE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B49836C-4626-4673-824C-9A1CBF3FCE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B49836C-4626-4673-824C-9A1CBF3FCE97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6163249-3897-4284-9EAA-BE0404EF36B6}
+	EndGlobalSection
+EndGlobal
