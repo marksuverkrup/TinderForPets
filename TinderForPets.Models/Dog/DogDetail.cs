@@ -13,6 +13,7 @@ namespace TinderForPets.Models.Dog
         public string Breed { get; set; }
         public string HairType { get; set; }
         public int Age { get; set; }
+        public string Location { get; set; }
         public int ShelterId { get; set; }
     }
 }

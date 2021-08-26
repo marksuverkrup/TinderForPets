@@ -22,7 +22,7 @@ namespace TinderForPets.Data
         public int Age { get; set; }
         
         [ForeignKey(nameof(AnimalShelter))]
-        public int ShelterId { get; set; }
+        public int? ShelterId { get; set; }
         public virtual AnimalShelter AnimalShelter { get; set; }
 
     }

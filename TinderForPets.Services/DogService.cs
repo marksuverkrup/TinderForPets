@@ -41,6 +41,8 @@ namespace TinderForPets.Services
                                 {
                                     PetId = e.PetId,
                                     Name = e.Name,
+                                    ShelterId = e.AnimalShelter.ShelterId,
+                                    Location = e.AnimalShelter.Location,
                                 }
                        );
                 return query.ToArray();
@@ -60,9 +62,11 @@ namespace TinderForPets.Services
                     {
                         PetId = entity.PetId,
                         Name = entity.Name,
+                        Location = entity.AnimalShelter.Location,
                         Breed = entity.Breed,
                         HairType = entity.HairType,
-                        Age = entity.Age
+                        Age = entity.Age,
+                        ShelterId = entity.AnimalShelter.ShelterId
                     };
             }
         }

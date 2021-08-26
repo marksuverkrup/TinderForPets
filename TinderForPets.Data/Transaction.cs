@@ -12,18 +12,18 @@ namespace TinderForPets.Data
     {
         [Key]
         public int TransactionId { get; set; }
-        
-        //[ForeignKey(nameof(Dog))]
-        public int PetId { get; set; }
-        //public virtual Dog Dog { get; set; }
-        
-        //[ForeignKey(nameof(UserId))]
-        //public int UserId { get; set; }
-        //public virtual UserId UserId { get; set; }
-        
-        //[ForeignKey(nameof(AnimalShelter))]
-        public int ShelterId { get; set; }
-        //public virtual AnimalShelter AnimalShelter { get; set; }
+
+        [ForeignKey(nameof(Dog))]
+        public int? PetId { get; set; }
+        public virtual Dog Dog { get; set; }
+
+        [ForeignKey(nameof(ApplicationUser))]
+        public string Id { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
+
+        [ForeignKey(nameof(AnimalShelter))]
+        public int? ShelterId { get; set; }
+        public virtual AnimalShelter AnimalShelter { get; set; }
 
         [Required]
         public DateTimeOffset TimeAdded { get; set; }

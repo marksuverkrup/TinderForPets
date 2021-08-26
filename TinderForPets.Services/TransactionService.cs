@@ -16,7 +16,7 @@ namespace TinderForPets.Services
                 new Transaction()
                 {
                     PetId = model.PetId,
-                    //UserId = model.UserId,
+                    Id = model.UserId,
                     ShelterId = model.ShelterId,
                     TimeAdded = DateTimeOffset.Now,
                 };
@@ -39,10 +39,13 @@ namespace TinderForPets.Services
                                 new TransactionListItem
                                 {
                                     TransactionId = e.TransactionId,
-                                    PetId = e.PetId,
-                                    //UserId = e.UserId,
-                                    ShelterId = e.ShelterId,
+                                    PetId = e.Dog.PetId,
+                                    UserId = e.ApplicationUser.Id,
+                                    ShelterId = e.AnimalShelter.ShelterId,
                                     TimeAdded = e.TimeAdded,
+                                    Name = e.Dog.Name,
+                                    Breed = e.Dog.Breed,
+                                    Location = e.AnimalShelter.Location,
                                 }
                        );
                 return query.ToArray();
@@ -61,10 +64,13 @@ namespace TinderForPets.Services
                     new TransactionDetail
                     {
                         TransactionId = entity.TransactionId,
-                        PetId = entity.PetId,
-                        //UserId = e.UserId,
-                        ShelterId = entity.ShelterId,
-                        TimeAdded = entity.TimeAdded
+                        PetId = entity.Dog.PetId,
+                        //UserId = entity.ApplicationUser.Id,
+                        //ShelterId = entity.AnimalShelter.ShelterId,
+                        TimeAdded = entity.TimeAdded,
+                        Name = entity.Dog.Name,
+                        Breed = entity.Dog.Breed,
+                        Location = entity.AnimalShelter.Location,
                     };
             }
         }
@@ -76,9 +82,9 @@ namespace TinderForPets.Services
                 var entity =
                     ctx
                         .Transactions
-                        .Single(e => e.TransactionId == model.TransactionId); 
+                        .Single(e => e.TransactionId == model.TransactionId);
                 entity.PetId = model.PetId;
-                //entity.UserId = model.UserId;
+                //entity.Id = model.UserId;
                 entity.ShelterId = model.ShelterId;
 
                 return ctx.SaveChanges() == 1;
