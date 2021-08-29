@@ -6,9 +6,9 @@
 
 <h2>User</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("This is for users", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
         <th>
@@ -42,7 +42,7 @@
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.PetId })
+                @Html.ActionLink("Details", "UserDetail", new { id = item.PetId })
             </td>
         </tr>
     }

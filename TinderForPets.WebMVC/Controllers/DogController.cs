@@ -42,6 +42,15 @@ namespace TinderForPets.WebMVC.Controllers
             return View(model);
         }
 
+        // GET: Dog/UserDetails/5
+        public ActionResult UserDetail(int id)
+        {
+            var svc = CreateDogService();
+            var model = svc.GetDogById(id);
+
+            return View(model);
+        }
+
         // GET: Dog/Create
         public ActionResult Create()
         {
