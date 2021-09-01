@@ -7,9 +7,9 @@
 <h2>User</h2>
 
 @*<p>
-    @Html.ActionLink("This is for users", "Create")
-</p>*@
-<table class="table">
+        @Html.ActionLink("This is for users", "Create")
+    </p>*@
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.PetId)
@@ -47,4 +47,31 @@
         </tr>
     }
 
-</table>
+</table>*@
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="dog-container col-md-4">
+            <div class="dog-card">
+                <div class="dog-header">
+                    @*@Html.DisplayFor(modelItem => item.PetId)*@
+                    @Html.DisplayFor(modelItem => item.Name)
+                </div>
+                <div class="dog-body">
+                    <div class="dog-location">
+                        <hr />
+                        <hr />
+                        <p>Photos comming soon!</p>
+                        <hr />
+                        <hr />
+                        @Html.DisplayFor(modelItem => item.ShelterId)
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </div>
+                    @Html.ActionLink("Details", "UserDetail", new { id = item.PetId })
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

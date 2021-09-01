@@ -1,6 +1,12 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:aquamarine;
+}
+
+.jumbotron{
+    z-index: 100;
+    opacity: 1;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +27,51 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+.dog-container{
+    padding: 1em;
+}
+
+.dog-card{
+    border: 1px solid black;
+}
+
+.dog-header{
+    min-height: 28px;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 2px solid black;
+}
+
+.dog-header a{
+    color: goldenrod;
+}
+.dog-body {
+    text-align: center;
+    min-height: 150px;
+    background-image: url('Assets/LightMetal.jpg');
+}
+.row {
+    background-image: url('Assets/DarkMarble.jpg');
+}
+.dog-location{
+    color: purple;
+}
+.light{
+    color: whitesmoke;
+}
+.paper {
+    background-image: url('Assets/Paperlight.jpg');
+}
+.dogphoto img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    z-index: -1;
 }

@@ -52,11 +52,11 @@ namespace TinderForPets.WebMVC.Controllers
 
             if (service.CreateTransaction(model))
             {
-                TempData["SaveResult"] = "Your note was created.";
+                TempData["SaveResult"] = "Your transaction was created.";
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "Note could not be created.");
+            ModelState.AddModelError("", "Transaction could not be created.");
 
             return View(model);
         }
@@ -95,11 +95,11 @@ namespace TinderForPets.WebMVC.Controllers
 
             if (service.UpdateTransaction(model))
             {
-                TempData["SaveResult"] = "Your note was updated.";
+                TempData["SaveResult"] = "Your transaction was updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your note could not be updated.");
+            ModelState.AddModelError("", "Your transaction could not be updated.");
             return View(model);
         }
 
@@ -123,7 +123,7 @@ namespace TinderForPets.WebMVC.Controllers
 
             service.DeleteTransaction(id);
 
-            TempData["SaveResult"] = "Your note was deleted";
+            TempData["SaveResult"] = "Your transaction was deleted";
 
             return RedirectToAction("Index");
         }

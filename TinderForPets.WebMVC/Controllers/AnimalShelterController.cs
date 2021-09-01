@@ -52,11 +52,11 @@ namespace TinderForPets.WebMVC.Controllers
 
             if (service.CreateAnimalShelter(model))
             {
-                TempData["SaveResult"] = "Your note was created.";
+                TempData["SaveResult"] = "Your shelter was created.";
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "Note could not be created.");
+            ModelState.AddModelError("", "Shelter could not be created.");
 
             return View(model);
         }
@@ -96,11 +96,11 @@ namespace TinderForPets.WebMVC.Controllers
 
             if (service.UpdateAnimalShelter(model))
             {
-                TempData["SaveResult"] = "Your note was updated.";
+                TempData["SaveResult"] = "Your shelter was updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your note could not be updated.");
+            ModelState.AddModelError("", "Your shelter could not be updated.");
             return View(model);
         }
 
@@ -124,7 +124,7 @@ namespace TinderForPets.WebMVC.Controllers
 
             service.DeleteAnimalShelter(id);
 
-            TempData["SaveResult"] = "Your note was deleted";
+            TempData["SaveResult"] = "Your shelter was deleted";
 
             return RedirectToAction("Index");
         }
